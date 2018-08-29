@@ -1,4 +1,3 @@
-
 public class Position {
 	private String positionCode; //Position Code
 	private int reqRank;//Rank required to be here
@@ -66,7 +65,16 @@ public class Position {
 	 * @return 
 	 */
 	public double getYearlySalary() {
-
+		
+		double ySalary;
+		
+		if(jobType == false){
+			ySalary = hSalary*20*4.5*12;
+			return ySalary;
+		}else if(jobType == true){
+			ySalary = hSalary*40*4.5*12;
+			return ySalary;
+		}
 		
 		return 0; //Temporal Return
 		
