@@ -1,4 +1,3 @@
-
 public class Employee {
 
 	public String eFullName; //Employee Full Name
@@ -79,14 +78,20 @@ public class Employee {
 	 * @return 
 	 */
 	public int seniorityLevel() {
+		 int YearsofService;
+		
 		if(yearService >= 10){
-			return 3;
-		}
-		else if(yearService < 10 && yearService >=5){
-			return 2;
-		}
-		else if(yearService < 5 && yearService >= 1){
-			return 1;
+			YearsofService = 3;
+			return YearsofService;
+		}else if (yearService < 10 && yearService > 5){
+			YearsofService = 2;
+			return YearsofService;
+		} else if (1 <= yearService && yearService <= 5){
+			YearsofService = 1;
+			return YearsofService;
+		} else if (yearService < 1){
+			YearsofService = 0;
+			return YearsofService;
 		}
 		
 		return 0;// Temporal Return
